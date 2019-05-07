@@ -14,18 +14,14 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-  <H1><a href="index.html">WEB</a></H1>
-
-
-  <input type="button" value="night" onclick="
+  <script>
+  function NightDayhandler(self){
   var target = document.querySelector('body');
-  if(this.value === 'night'){
+  if(self.value === 'night'){
     target.style.backgroundColor = 'black';
     target.style.color = 'white';
-    this.value = 'day';
+    self.value = 'day';
 
     var alist = document.querySelectorAll('a');
     var i = 0;
@@ -37,7 +33,7 @@
   } else {
     target.style.backgroundColor = 'white';
     target.style.color = 'black';
-    this.value = 'night';
+    self.value = 'night';
 
     var alist = document.querySelectorAll('a');
     var i = 0;
@@ -46,6 +42,24 @@
       i = i + 1;
     }
   }
+}
+  </script>
+
+</head>
+
+<body>
+  <H1><a href="index.html">WEB</a></H1>
+
+  <input type="button" value="night" onclick="
+  NightDayhandler(this);
+  ">
+
+  <input type="button" value="night" onclick="
+  NightDayhandler(this);
+  ">
+
+  <input type="button" value="night" onclick="
+  NightDayhandler(this);
   ">
 
 <div id="grid">
